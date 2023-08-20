@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function shortName(str) {
+        str = str.split(" ");
+        let result = "";
+        for (let i = 0; i < str.length - 1; i++) {
+          let tem = str[i];
+          tem = tem[0].toUpperCase();
+          tem += ".";
+          str[i] = tem;
+        }
+        let temp = str[str.length - 1];
+        temp = temp.split("");
+        temp[0] = temp[0].toUpperCase();
+        temp = temp.join("");
+        console.log(temp);
+        str[str.length - 1] = temp;
+        console.log(str.join(" "));
+      }
+
+      let str = "rabindra nath tagore";
+      shortName(str);
+    </script>
+  </head>
+  <body></body>
+</html>
